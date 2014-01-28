@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  contractor: MyString
+  architect: MyString
+  product: MyString
+  product_type: 1
+
+two:
+  name: MyString
+  contractor: MyString
+  architect: MyString
+  product: MyString
+  product_type: 1

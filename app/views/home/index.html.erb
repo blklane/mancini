@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<% if user_signed_in? %>
+
+	<%= simple_nested_form_for @project do |f| %>
+		<%= f.input :name %>
+		<%= f.input :contractor %>
+		<%= f.input :architect %>
+		<%= f.input :product %>
+		<%= f.input :product_type, collection: ['Structural', 'Floor', 'Interior'] %>
+		Images <%= f.link_to_add '+', :images, "data-target" => "#images" %>
+		<div id="images">
+			<%= f.fields_for :images do |image| %>
+				<%= image.input :asset, label: false %>
+			<% end %>
+		</div>
+		<%= f.button :submit %>
+	<% end %>
+<% end %>
