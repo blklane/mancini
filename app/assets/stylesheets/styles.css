@@ -1520,7 +1520,7 @@ body{
   display: hidden;
   width: 40px;
   height: 40px;
-  background: #0b223e url(../images/menu-icon.png) center;
+  background: #0b223e url(https://s3.amazonaws.com/bt_mancini/site-images/menu-icon.png) center;
 }
 
 a {
@@ -1533,7 +1533,7 @@ nav {
   margin: 0px auto;
   width: 100%;
   max-width: 1020px;
-  background: url('../images/header-bg.png') repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   margin-top: 0px;
 }
 
@@ -1715,21 +1715,21 @@ section.division {
 }
 
 #floor-covering {
-  background: url('../images/floor-covering.jpg') no-repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/floor-covering.jpg) no-repeat;
   height: 150px;
   margin-top: 20px;
   padding-top: 20px;
 }
 
 #interior-architectural-products{
-  background: url('../images/interior-bg.jpg') no-repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/interior-bg.jpg) no-repeat;
   height: 150px;
   margin-top: 20px;
   padding-top: 20px;
 }
 
 #structural {
-  background: url('../images/structural-bg.png') no-repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/structural-bg.png) no-repeat;
   height: 150px;
   margin-top: 20px;
   padding-top: 20px;
@@ -1904,13 +1904,13 @@ h4 {
 
 .footer {
   width: 100%;
-  background: url('../images/header-bg.png') repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   float: left;
   margin-top: 20px;
 }
 
 footer {
-  background: url('../images/header-bg.png') repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   height: 100%;
   margin: 10px auto;
   color: white;
@@ -1964,7 +1964,7 @@ BEGIN MOBILE STYLES HERE
 }
 
 nav {
-  background: url('../images/header-bg.png') repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   height: 90px;
   padding: 5px auto;
   margin: 0 0 20px 0;

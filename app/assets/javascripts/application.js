@@ -16,4 +16,15 @@
 //= require jquery_nested_form
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation({
+      orbit: {
+        animation: 'slide',
+        timer: false,
+        slide_number: false,
+        variable_height: true,
+        animation_speed: 500,
+        navigation_arrows: true,
+        bullets: false
+      }
+    }); 
+});

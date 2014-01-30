@@ -2,6 +2,12 @@ Mancini::Application.routes.draw do
   devise_for :users
 
   get "home/index"
+  get 'floor-covering', to: 'home#floorcovering'
+  get 'interior', to: 'home#interior'
+  get 'structural', to: 'home#structural'
+  get 'contact', to: 'home#contact'
+  get 'home', to: 'home#index'
+  get 'add-gallery', to: 'home#addgallery'
 
   resources :projects
 

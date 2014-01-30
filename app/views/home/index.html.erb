@@ -1,19 +1,56 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<% if user_signed_in? %>
 
-	<%= simple_nested_form_for @project do |f| %>
-		<%= f.input :name %>
-		<%= f.input :contractor %>
-		<%= f.input :architect %>
-		<%= f.input :product %>
-		<%= f.input :product_type, collection: ['Structural', 'Floor', 'Interior'] %>
-		Images <%= f.link_to_add '+', :images, "data-target" => "#images" %>
-		<div id="images">
-			<%= f.fields_for :images do |image| %>
-				<%= image.input :asset, label: false %>
-			<% end %>
-		</div>
-		<%= f.button :submit %>
-	<% end %>
-<% end %>
+    <!-- Photo Rotator -->
+    <!-- FlexSlider #2 -->
+    <div class="row">
+      <ul class="orbit" data-orbit>
+      <li>
+        <img src="https://s3.amazonaws.com/bt_mancini/site-images/rotator1.png" alt="slide 1" />
+        <div class="orbit-caption">B.T. Mancini is one of the largest independent flooring contractors in the US.</div> 
+      </li> 
+      <li>
+        <img src="https://s3.amazonaws.com/bt_mancini/site-images/rotator4.png" alt="slide 2" /> 
+
+      </li>
+      <li> 
+        <img src="https://s3.amazonaws.com/bt_mancini/site-images/rotator5.png" alt="slide 3" /> 
+        <div class="orbit-caption">We are dedicated to providing customers with quality materials, exemplary service and superior installations.</div> 
+      </li>
+    </ul>
+  </div>
+      
+      
+
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div id="tag-line-bg">
+         <h3>Dedicated to quality materials, exemplary products, service and superior installations.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="division large-4 medium-4 small-12 columns">
+        <h5>Floor Covering Division</h5>
+          <div id="floor-covering">
+            <p class="division-text">B.T. Mancini is one of the largest independent flooring Contractors in the United States. We provide a multitude of floor covering products to meet your needs. <a href="floor-covering.php" class="division-link">See More...</a></p>
+            
+          </div>
+      </div>
+      <div class="division large-4 medium-4 small-12 columns">
+        <h5>Interior Architectural Products</h5>
+          <div id="interior-architectural-products">
+            <p class="division-text">Our team of experienced personnel will provide quality services that you expect on each project from beginning to completion.<a href="interior-architecture.php" class="division-link">See More...</a></p>
+            
+          </div>
+      </div>
+      <div class="division large-4 medium-4 small-12 columns">
+        <h5>Structural Division</h5>
+          <div id="structural">
+            <p class="division-text">B.T. Mancini Company offers a wide variety of specialty products for the commercial, educational, hospitality and industrial markets in Northern California and Northern Nevada.<a href="structural.php" class="division-link">See More...</a></p>
+            
+          </div>
+        </div>
+    </div>
+
+

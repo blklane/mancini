@@ -1,0 +1,21 @@
+<h1>B.T. Mancini Gallery Manager</h1>
+<p>Add a new photo album</p>
+<form class="large-3 medium-5 small-12">
+<% if user_signed_in? %>
+
+	<%= simple_nested_form_for @project do |f| %>
+		<%= f.input :name %>
+		<%= f.input :contractor %>
+		<%= f.input :architect %>
+		<%= f.input :product %>
+		<%= f.input :product_type, collection: ['Structural', 'Floor', 'Interior'] %>
+		Images <%= f.link_to_add '+', :images, "data-target" => "#images" %>
+		<div id="images">
+			<%= f.fields_for :images do |image| %>
+				<%= image.input :asset, label: false %>
+			<% end %>
+		</div>
+		<%= f.button :submit %>
+	<% end %>
+<% end %>
+</form>
