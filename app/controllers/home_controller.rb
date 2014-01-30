@@ -6,17 +6,32 @@ class HomeController < ApplicationController
   def home
   end
 
-  def floorcovering
-  end
+  # def companyhistory
+  #   ### Static Page ###
+  # end
 
-  def structural
-  end
+  # def outreach
+  #   ### Static Page ###
+  # end
 
-  def gallery
-  end
+  # def installers
+  #   ### Static Page ###
+  # end
 
-  def interior
-  end
+  # def floorcovering
+  #   ### Static Page ###
+  # end
+
+  # def structural
+  #   ### Static Page ###
+  # end
+
+  # def gallery
+  # end
+
+  # def interior
+  #   ### Static Page ###
+  # end
 
   def admin
   end

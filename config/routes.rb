@@ -8,6 +8,11 @@ Mancini::Application.routes.draw do
   get 'contact', to: 'home#contact'
   get 'home', to: 'home#index'
   get 'add-gallery', to: 'home#addgallery'
+  get 'company-history', to: 'home#companyhistory'
+  get 'installers', to: 'home#installers'
+  get 'outreach', to: 'home#outreach'
+  get 'design-assistance', to: 'home#designassistance'
+  get 'service-program', to: 'home#serviceprogram'
 
   resources :projects
 
