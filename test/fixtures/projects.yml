@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  contractor: MyString
   architect: MyString
+  contractor: MyString
+  name: MyString
   product: MyString
-  product_type: 1
+  product_type: MyString
+  slug: MyString
 
 two:
-  name: MyString
-  contractor: MyString
   architect: MyString
+  contractor: MyString
+  name: MyString
   product: MyString
-  product_type: 1
+  product_type: MyString
+  slug: MyString

@@ -1,4 +1,7 @@
 Mancini::Application.routes.draw do
+  resources :projects
+
+
   devise_for :users
 
   get "home/index"
@@ -13,9 +16,6 @@ Mancini::Application.routes.draw do
   get 'outreach', to: 'home#outreach'
   get 'design-assistance', to: 'home#designassistance'
   get 'service-program', to: 'home#serviceprogram'
-
-  resources :projects
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

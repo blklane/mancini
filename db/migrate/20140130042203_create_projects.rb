@@ -1,13 +1,15 @@
 class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
-      t.string :name
-      t.string :contractor
       t.string :architect
+      t.string :contractor
+      t.string :name
       t.string :product
       t.string :product_type
+      t.string :slug
 
       t.timestamps
     end
+    add_index :projects, :slug, unique: true
   end
 end
