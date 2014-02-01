@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :contractor
       t.string :name
       t.string :product
-      t.string :product_type
+      t.integer :product_type
       t.string :slug
 
       t.timestamps

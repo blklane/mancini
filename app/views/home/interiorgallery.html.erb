@@ -1,2 +1,11 @@
-
 <!-- Interior Photo Albums Go Here -->
+<!-- Floor covering gallery images go here -->
+<% @projects.each do |project| %>
+	<%= project.name %>
+	<%= project.architect %>
+	<%= project.contractor %>
+	<%= project.product %>
+	<% project.images.each do |image| %>
+		<%= image_tag(image.asset.url) %>
+	<% end %>
+<% end %>

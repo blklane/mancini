@@ -36,6 +36,18 @@ class HomeController < ApplicationController
   def admin
   end
 
+  def interiorgallery
+    @projects = Project.where(:product_type => 2)
+  end
+
+  def floorgallery
+    @projects = Project.where(:product_type => 1)
+  end
+
+  def structuralgallery
+    @projects = Project.where(:product_type => 3)
+  end
+
   def addgallery
     @project = Project.new
     2.times {@project.images.build}

@@ -1,15 +1,14 @@
-<%= simple_form_for(@project) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :architect %>
-    <%= f.input :contractor %>
-    <%= f.input :name %>
-    <%= f.input :product %>
-    <%= f.input :product_type %>
+<%= simple_nested_form_for @project do |f| %>
+  <%= f.input :name %>
+  <%= f.input :contractor %>
+  <%= f.input :architect %>
+  <%= f.input :product %>
+  <%= f.input :product_type, collection: [['Flooring',1],['Interior',2],['Structural',3]] %>
+  Images <%= f.link_to_add '+', :images, "data-target" => "#images" %>
+  <div id="images">
+    <%= f.fields_for :images do |image| %>
+      <%= image.input :asset, label: false %>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit %>
 <% end %>
