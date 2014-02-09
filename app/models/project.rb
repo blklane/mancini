@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   extend FriendlyId
-  attr_accessible :architect, :contractor, :name, :product, :product_type, :slug
+  attr_accessible :architect, :contractor, :name, :product, :product_type, :slug, :images_attributes
   validates :product_type, :numericality => {
   													 :greater_than_or_equal_to => 1,
   													 :less_than_or_equal_to => 3,

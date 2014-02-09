@@ -1,11 +1,29 @@
 <!-- structural gallery images go here -->
 <!-- Floor covering gallery images go here -->
-<% @projects.each do |project| %>
-	<%= project.name %>
-	<%= project.architect %>
-	<%= project.contractor %>
-	<%= project.product %>
-	<% project.images.each do |image| %>
-		<%= image_tag(image.asset.url) %>
-	<% end %>
+	<div class="row">
+	<div class="large-3 colums sidebar">
+		<ul>
+			<li class="slider">◀</li>
+			<% @projects.each do |project| %>
+            <li class="project"><%= project.name %>
+                <ul id="drop1" class="f-dropdown" data-dropdown-content>
+                <li class="status"><%= project.architect %></li>
+                <li class="status"><%= project.contractor %></li>
+                <li class="status"><%= project.product %></li>
+            </ul></li></ul>
+    </div>
+    <div class="gallery">
+	<div class="large-9 columns">
+		<ul data-orbit>
+			<% project.images.each do |image| %>
+			  <li>
+			    <%= image_tag(image.asset.url) %>
+			  </li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+
+</div>
 <% end %>

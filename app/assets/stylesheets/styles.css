@@ -1534,13 +1534,22 @@ nav {
   width: 100%;
   max-width: 1020px;
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
-  margin-top: 0px;
+}
+
+.row {
+  width: 100%;
 }
 
 .orbit {
   max-height: 300px;
 }
 
+.notice {
+  display: none;
+}
+.alert {
+  display: none;
+}
 
 /* Safety
 ################################################*/
@@ -1906,14 +1915,13 @@ h4 {
   width: 100%;
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   float: left;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 footer {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   height: 100%;
   margin: 10px auto;
-  color: white;
   font-family: Galdeano;
 }
 
@@ -1928,20 +1936,80 @@ footer ul li {
 footer ul li a{
   line-height: 24px;
   margin-left: 5px;
-  color: rgba(255,255,255,.9);
+  color: #fff;
   font-weight: lighter;
   font-size: .9em;
   font-family: Helvetica;
 }
 
-footer ul li a:hover{
-  color: rgba(255,255,255,1);
+a.footer-link {
+  color: #fff;
 }
 
-footer section h4, h4 a{
-  font-size: 1.2em;
-  color: white;
+footer ul li a:hover{
+  background: none;
+  color: #fff;
+  font-weight: bold;
 }
+
+footer section h4{
+  font-size: 1.2em;
+  color: #fff;
+}
+
+a.footer-right {
+  color: #fff;
+}
+
+a.footer-right:hover {
+  color: #fff;
+  background: none;
+}
+
+
+/***********************************
+***********************************
+***********************************
+***********************************
+***********************************
+***********************************
+GALLERY
+***********************************
+***********************************
+***********************************
+***********************************
+***********************************
+***********************************/
+
+.sidebar {
+    height: 500px;
+    background-color: #ddd;
+    float: left;
+}
+
+.sidebar ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.slider {
+  color: green;
+  float: left;
+  z-index: 5;
+}
+
+.gallery {
+  background-color: #000;
+  margin: 0px auto;
+  height: 500px;
+}
+.gallery img {
+  max-height: 480px;
+  margin: 10px 5px;
+  vertical-align: center;
+}
+
+
 /***********************************
 ***********************************
 ***********************************
@@ -2062,8 +2130,6 @@ ul.products {
 ul.awards {
   display: none;
 }
-
-
 
 footer section.grid_4{
   width: 50%;
