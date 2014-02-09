@@ -38,14 +38,20 @@ class HomeController < ApplicationController
 
   def interiorgallery
     @projects = Project.where(:product_type => 2)
+    @images = @projects.map {|i| i.images}
+    render 'gallery'
   end
 
   def floorgallery
     @projects = Project.where(:product_type => 1)
+    @images = @projects.map {|i| i.images}
+    render 'gallery'
   end
 
   def structuralgallery
     @projects = Project.where(:product_type => 3)
+    @images = @projects.map {|i| [i.name.downcase.gsub(' ', '_'), i.images]}
+    render 'gallery'
   end
 
   def addgallery

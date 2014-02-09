@@ -1,0 +1,15 @@
+<% @projects.each do |project| %>
+	<%= project.name %>
+	<%= project.architect %>
+	<%= project.contractor %>
+	<%= project.product %>
+<% end %>
+
+<% @images.each do |images| %>
+	<%= images[0] %>
+	<% if images[1].present? %>
+		<% images[1].each do |image| %>
+			<%= image_tag(image.asset.url) %>
+		<% end %>
+	<% end %>
+<% end %>
