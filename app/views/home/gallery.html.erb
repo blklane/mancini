@@ -1,39 +1,38 @@
 <!-- structural gallery images go here -->
 <!-- Floor covering gallery images go here -->
-<div class="row">
-	<div class="large-3 colums sidebar">
-		<ul>
-			<li class="slider">◀</li>
-			<% ['floor', 'interior', 'structural'].each do |project_type| %>
-				<%= instance_variable_get("@#{project_type}_type") %>
-				<% instance_variable_get("@#{project_type}_projects").each do |project| %>
-					<li class="project"><%= project.name %>
-						<ul id="drop1" class="f-dropdown" data-dropdown-content>
-							<li class="status"><%= project.architect %></li>
-	            <li class="status"><%= project.contractor %></li>
-	            <li class="status"><%= project.product %></li>
-	          </ul>
-	        </li>
-      	<% end %>
-			<% end %>
-		</ul>
-  </div>
-  <div class="gallery">
-		<div class="large-9 columns">
-			<ul data-orbit>
-				<!-- types of images -->
-				<% [[@floor_images, @interior_images, @structural_images]].each do |type_images| %>
-					<!-- projects within each type -->
-					<% type_images.each do |project| %>
-						<% if project.present? && project.flatten!(1) %>
-							<%= project.first %>
-							<% project.last.each do |image| %>
-								<%= image_tag(image.asset.url) if image.present? %>
-							<% end %>
-						<% end %>
-					<% end %>
-				<% end %>
-			</ul>
-		</div>
+<div class="large-3 medium-3 colums sidebar">
+	<ul>
+		<!-- <li class="slider">◀</li> -->
+        <% ['floor', 'interior', 'structural'].each do |project_type| %>
+			<h5><%= instance_variable_get("@#{project_type}_type") %>
+			<% instance_variable_get("@#{project_type}_projects").each do |project| %></h5>
+				<li class="project" data-id="<%= project.name.downcase.gsub(' ', '_') %>"><%= project.name %>
+	                <ul class="dropdown" data-dropdown-content>
+	                    <li class="status">Architect: <%= project.architect %></li>
+	                    <li class="status">Contractor: <%=project.contractor%></li>
+	                    <li class="status">Products:<%=project.product%></li>
+	                </ul>
+	            </li>
+       		<% end %>
+		<% end %>
+	</ul>
 	</div>
+
+<div id="gallery-container" class="large-9 medium-9 columns">
+	<% [[@floor_images, @interior_images, @structural_images]].each do |type_images| %>
+		<!-- projects within each type -->
+		<% type_images.each do |project| %>
+			<% if project.present? && project.flatten!(1) %>	
+				<div class="gallery" data-id="<%= project.first.downcase.gsub(' ', '_') %>">
+					<h5 class="project-name"><%= project.first.upcase.gsub('_', ' ') %></h5>
+					<ul class="orbit-2" data-orbit>
+						<!-- types of images -->
+						<% project.last.each do |image| %>
+							<%= image_tag(image.asset.url) if image.present? %>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+		<% end %>
+	<% end %>
 </div>
