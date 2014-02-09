@@ -51,6 +51,17 @@ $(document).ready(function () {
         $('#safety img').addClass('animated bounceIn');
     }
 
+    function gallerySlider() {
+    $(".sidebar li:not(.slider)").click(function () {
+        $(".slider").animate({
+                top: $(this).offset().top,
+                height: $(this).height()
+            });
+        });
+    }
+
+    $('.project').on('click', gallerySlider);
+
     $('#safe, option').click(function () {
         openSafety();
     });
