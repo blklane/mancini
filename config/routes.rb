@@ -16,9 +16,7 @@ Mancini::Application.routes.draw do
   get 'outreach', to: 'home#outreach'
   get 'design-assistance', to: 'home#designassistance'
   get 'service-program', to: 'home#serviceprogram'
-  get 'floor-gallery', to: 'home#floorgallery'
-  get 'structural-gallery', to: 'home#structuralgallery'
-  get 'interior-gallery', to: 'home#interiorgallery'
+  get 'gallery', to: 'home#gallery'
 
   # The priority is based upon order of creation:
   # first creatget 'floor-gallery', to: 'home#floorgallery'

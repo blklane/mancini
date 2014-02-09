@@ -4,25 +4,31 @@
 	<div class="large-3 colums sidebar">
 		<ul>
 			<li class="slider">◀</li>
-			<% @projects.each do |project| %>
-				<li class="project"><%= project.name %>
-					<ul id="drop1" class="f-dropdown" data-dropdown-content>
-						<li class="status"><%= project.architect %></li>
-            <li class="status"><%= project.contractor %></li>
-            <li class="status"><%= project.product %></li>
-          </ul>
-        </li>
+			<% [@floor_projects, @interior_projects, @structural_projects].each do |project_type| %>
+				<% project_type.each do |project| %>
+					<li class="project"><%= project.name %>
+						<ul id="drop1" class="f-dropdown" data-dropdown-content>
+							<li class="status"><%= project.architect %></li>
+	            <li class="status"><%= project.contractor %></li>
+	            <li class="status"><%= project.product %></li>
+	          </ul>
+	        </li>
+	       <% end %>
 			<% end %>
 		</ul>
   </div>
   <div class="gallery">
 		<div class="large-9 columns">
 			<ul data-orbit>
-				<% @images.each do |images| %>
-					<%= images[0] %>
-					<% if images[1].present? %>
-						<% images[1].each do |image| %>
-							<%= image_tag(image.asset.url) %>
+				<!-- types of images -->
+				<% [[@floor_images, @interior_images, @structural_images]].each do |type_images| %>
+					<!-- projects within each type -->
+					<% type_images.each do |project| %>
+						<% if project.present? && project.flatten!(1) %>
+							<%= project.first %>
+							<%= project.last.each do |image| %>
+								<%= image_tag(image.asset.url) if image.present? %>
+							<% end %>
 						<% end %>
 					<% end %>
 				<% end %>

@@ -36,22 +36,11 @@ class HomeController < ApplicationController
   def admin
   end
 
-  def interiorgallery
-    @projects = Project.where(:product_type => 2)
-    @images = @projects.map {|i| i.images}
-    render 'gallery'
-  end
-
-  def floorgallery
-    @projects = Project.where(:product_type => 1)
-    @images = @projects.map {|i| i.images}
-    render 'gallery'
-  end
-
-  def structuralgallery
-    @projects = Project.where(:product_type => 3)
-    @images = @projects.map {|i| [i.name.downcase.gsub(' ', '_'), i.images]}
-    render 'gallery'
+  def gallery
+    [['floor', 1], ['interior', 2], ['structural', 3]].each do |type|
+      instance_variable_set("@#{type[0]}_projects", Project.where(:product_type => type[1]))
+      instance_variable_set("@#{type[0]}_images", instance_variable_get("@#{type[0]}_projects").map {|i| [i.name.downcase.gsub(' ', '_'), i.images]})
+    end
   end
 
   def addgallery
