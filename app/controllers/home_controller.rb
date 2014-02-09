@@ -38,6 +38,7 @@ class HomeController < ApplicationController
 
   def gallery
     [['floor', 1], ['interior', 2], ['structural', 3]].each do |type|
+      instance_variable_set("@#{type[0]}_type", "#{type[0].capitalize}")
       instance_variable_set("@#{type[0]}_projects", Project.where(:product_type => type[1]))
       instance_variable_set("@#{type[0]}_images", instance_variable_get("@#{type[0]}_projects").map {|i| [i.name.downcase.gsub(' ', '_'), i.images]})
     end

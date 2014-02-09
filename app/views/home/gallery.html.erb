@@ -4,8 +4,9 @@
 	<div class="large-3 colums sidebar">
 		<ul>
 			<li class="slider">◀</li>
-			<% [@floor_projects, @interior_projects, @structural_projects].each do |project_type| %>
-				<% project_type.each do |project| %>
+			<% ['floor', 'interior', 'structural'].each do |project_type| %>
+				<%= instance_variable_get("@#{project_type}_type") %>
+				<% instance_variable_get("@#{project_type}_projects").each do |project| %>
 					<li class="project"><%= project.name %>
 						<ul id="drop1" class="f-dropdown" data-dropdown-content>
 							<li class="status"><%= project.architect %></li>
@@ -13,7 +14,7 @@
 	            <li class="status"><%= project.product %></li>
 	          </ul>
 	        </li>
-	       <% end %>
+      	<% end %>
 			<% end %>
 		</ul>
   </div>
@@ -26,7 +27,7 @@
 					<% type_images.each do |project| %>
 						<% if project.present? && project.flatten!(1) %>
 							<%= project.first %>
-							<%= project.last.each do |image| %>
+							<% project.last.each do |image| %>
 								<%= image_tag(image.asset.url) if image.present? %>
 							<% end %>
 						<% end %>
