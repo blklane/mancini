@@ -40,7 +40,7 @@ $(document).ready(function () {
         $('#safety .container, #bar a').fadeOut(500);
         $('#safety, #safety .container').addClass('safety-squish');
         $('#safety .container').removeClass('fadeInDown');
-        $('#safety .container').addClass('animated fadeOutUp');
+        $('#safety .container').addClass('fadeOutUp');
         $('#overlay').removeClass('open');
         $('#safety img').removeClass('bounceIn');
         $('documentElement').scrollTop('0px');
@@ -51,10 +51,11 @@ $(document).ready(function () {
         $('#safety, #safety .container').removeClass('safety-squish');
         $('#safety .container, #bar a').fadeIn(500);
         $('#overlay').addClass('open');
-        $('#safety .container').addClass('animated fadeInDown');
-        $('#safety .container').removeClass('fadeOutUp');
-        $('#safety img').addClass('animated bounceIn');
+        $('#safety .container').addClass('fadeInDown').removeClass('fadeOutUp');
+        $('#safety img').addClass('bounceIn');
     }
+
+
 
     function gallerySlider() {
         $(".slider").animate({
