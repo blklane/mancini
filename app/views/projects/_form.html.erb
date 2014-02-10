@@ -1,10 +1,12 @@
+<div id="new-gallery" class="large-6 medium-6 small-12">
 <%= simple_nested_form_for @project do |f| %>
   <%= f.input :name %>
   <%= f.input :contractor %>
   <%= f.input :architect %>
   <%= f.input :product %>
   <%= f.input :product_type, collection: [['Flooring',1],['Interior',2],['Structural',3]] %>
-  Images <%= f.link_to_add '+', :images, "data-target" => "#images" %>
+  <%= f.link_to_add '<span class="button">Add Images</span>'.html_safe, :images, "data-target" => "#images" %>
+
   <div id="images">
     <%= f.fields_for :images do |image| %>
       <%= image.input :asset, label: false %>
@@ -12,3 +14,4 @@
   </div>
   <%= f.button :submit %>
 <% end %>
+</div>

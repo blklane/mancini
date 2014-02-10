@@ -1809,8 +1809,15 @@ section h2 {
   font-family: Inder;
 }
 
+#contact-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
 #maps-canvas {
-  height: 400px;
+  min-height: 400px;
+  height: 100%;
   z-index: -1;
   background: url('../images/photo-gallery-bg.png') repeat;
 }
@@ -1823,10 +1830,8 @@ section h2 {
 #contact-us { 
   background-color: #1f3857;
   min-height: 400px;
-  max-height: 450px;
   width: 33%;
   padding: 0px 0px 0px 5px;
-  color: white;
 }
 
 .icon {
@@ -1887,7 +1892,7 @@ textarea {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin: 2px auto;
+  margin: 10px auto;
   font-size: 14px;
   padding: 2%;
   height: 45px;
@@ -1903,7 +1908,6 @@ textarea {
   font-weight: bolder;
   vertical-align: center;
 }
-
 
 h4 {
   color: #1d3552;
@@ -1968,6 +1972,64 @@ a.footer-right:hover {
   background: none;
 }
 
+.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #6797b5;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #6797b5;
+  box-shadow:inset 0px 1px 0px 0px #6797b5;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #185285), color-stop(1, #14416b) );
+  background:-moz-linear-gradient( center top, #185285 5%, #14416b 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#185285', endColorstr='#14416b');
+  background-color:#185285;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0;
+  border:1px solid #29394d;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:50px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #00050a;
+}
+.button a {
+  color: white;
+}
+
+.button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #14416b), color-stop(1, #185285) );
+  background:-moz-linear-gradient( center top, #14416b 5%, #185285 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#14416b', endColorstr='#185285');
+  background-color:#14416b;
+}.button:active {
+  position:relative;
+  top:1px;
+}
+
+#contact-us .button {
+  color: #fff;
+  margin: 10px;
+  width: 93%;
+}
+
+#images label {
+  color: white;
+  text-decoration: none;
+}
+
 
 /***********************************
 ***********************************
@@ -1982,6 +2044,14 @@ GALLERY
 ***********************************
 ***********************************
 ***********************************/
+#new-gallery {
+  background-color:#123054;
+  padding: 10px;
+  color: white;
+  min-height: 460px;
+  max-height: 600px;
+}
+
 #gallery-container {
   background-color: rgba(0,0,0,.8);
     -moz-box-shadow:    inset 0 0 800px #000000;
@@ -1993,17 +2063,24 @@ GALLERY
  /* max-height: 500px;*/
 }
 
-
 .sidebar {
     z-index: 2;
     background-color: rgb(229,229,229);
     float: left;
     height: 500px;
     margin: 0px auto;
+    padding: 0px;
+}
+
+.sidebar ul {
+  width: 100%;
+  float: left;
+  margin: 0px;
 }
 
 .sidebar h5 {
   margin: 0px;
+  margin-top: 20px;
   width: 100%;
   font-weight: bold;
 }
@@ -2012,25 +2089,46 @@ h5.project-name {
   color: white;
 }
 
-li.project {
-line-height: 1.6em;
-list-style-type: none;
-margin-left: 5px;
-font-size: 1.15em;
+h5.gallery-division {
+  font-size: 1.7em;
+  font-weight: lighter;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid #bbb;
 }
 
-ul.dropdown li {
+li.project {
+line-height: 1.7em;
+list-style-type: none;
+font-size: 1.15em;
+margin-right: 0px;
+}
+
+li.project a {
+  margin-left: 7px;
+}
+
+li.project a:hover {
+  background-color: rgba(0,0,0,0);
+  color: #000;
+  font-weight: bold;
+}
+
+ul.dropdown li.status {
   margin-left: 0px;
   list-style-type: none;
-  font-size: .8em;
-  line-height: 1.4em;
+  font-size: .9em;
+  line-height: 1em;
+  background-color: rgba(0,0,0,.87);
+  padding: 5px 0px 5px 15px;
+  color: white;
 }
 
 .dropdown {
-  margin-left: 2px;
   margin-bottom: 10px;
   display: none;
 }
+
 
 .gallery {
   margin: 0px auto;
@@ -2153,6 +2251,8 @@ ul.products {
   color: white;
 }
 
+
+
 .office {
   height: 100%;
   padding: 0.5%;
@@ -2180,10 +2280,6 @@ footer ul li a{
   font-weight: lighter;
   font-size: .9em;
   font-family: Helvetica;*/
-}
-
-footer ul li a:hover{
-  color: rgba(255,255,255,1);
 }
 
 

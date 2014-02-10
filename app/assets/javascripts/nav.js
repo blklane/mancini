@@ -1,5 +1,9 @@
 $(document).ready(function () {
     $('.gallery').hide();
+    $('.button').children().on('click', function(){
+        $(this).parent().addClass("animated tada");
+        // $(this).delay(500).removeClass("tada");
+    });
 
     function initialize() {
         var myLatlng = new google.maps.LatLng(37.4206, -121.8917);
@@ -53,7 +57,9 @@ $(document).ready(function () {
     }
 
     function gallerySlider() {
-
+        $(".slider").animate({
+            top: $(this).closest('li').offset().top,
+        });
       
         var classy = $(this).data("id"),
         searchGallery = '.gallery[data-id=' + classy + ']',
@@ -66,12 +72,12 @@ $(document).ready(function () {
             $(this).addClass('selected').find('.dropdown').slideToggle();
         }
 
-        var pastGallery = $('.gallery[data-active=true]')
+        var pastGallery = $('.gallery[data-active=true]');
         if(pastGallery.length > 0 && pastGallery != newGallery){
-            pastGallery.slideUp().removeClass('fadeInDown').addClass('animated fadeOutUp').removeAttr('data-active');
+            pastGallery.hide().removeClass('fadeInLeft').addClass('animated fadeOutUp').removeAttr('data-active');
         }
         if(pastGallery != newGallery){
-            newGallery.slideDown().removeClass('fadeOutUp').addClass('animated fadeInDown').attr('data-active', true);
+            newGallery.show().removeClass('fadeOutUp').addClass('animated fadeInLeft').attr('data-active', true);
         }
 }
 
