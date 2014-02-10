@@ -1473,7 +1473,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 body{
-  font-family: Inder, Economica, Galdeano;
+  font-family: Istok Web, News Cycle, Yanone Kaffeesatz;
   color: #1d3552;
   margin: 0 auto;
   max-width: 1020px;
@@ -1493,17 +1493,18 @@ body{
   margin-left: 45%;
 }
 .header h4 {
-  font-family: Inder;
+  font-family: News Cycle;
   font-size: 1em;
   margin-top: 0px;
   font-size: 1.1em;
-  top: 50px;
+  top: 45px;
 }
 
 .header h1 {
-  font-family: Inder;
+  font-family: News Cycle;
   margin-top: 0px;
   top: 5px;
+  font-weight: bold;
 }
 
 #btm-logo {
@@ -1705,12 +1706,19 @@ h3 {
 }
 
 #tag-line-bg h3 {
-  line-height: 35px;
+  line-height: 45px;
   font-size: 1.4em;
-  font-weight: bolder;
+  font-weight: lighter;
   width: 100%;
   text-align: center;
-  color: #1f3857;
+  color: #fff;
+  margin: 0px;
+  font-family: Istok Web;
+  background-color: #777;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png);
+  -moz-box-shadow:    inset 0 0 5px #000000;
+   -webkit-box-shadow: inset 0 0 5px #000000;
+   box-shadow:         inset 0 0 5px #000000; 
 }
 
 .division p a, .division {
@@ -1766,7 +1774,7 @@ ul.csi-codes li {
   line-height: 1.6em;
   font-size: 1.4em;
   font-weight: bold;
-  font-family: Inder;
+  font-family: Istok Web;
   width: 80%;
 }
 
@@ -1806,7 +1814,7 @@ section h2 {
   line-height: 1.2em;
   font-size: 1.2em;
   font-weight: bold;
-  font-family: Inder;
+  font-family: Istok Web;
 }
 
 #contact-container {
@@ -1868,7 +1876,7 @@ section h2 {
   color: #1d3552;
   font-size: 1.05em;
   line-height: 24px;
-  font-family: Helvetica;
+  font-family: News Cycle;
   font-weight: bold;
   padding-left: 10px;
 }
@@ -1912,7 +1920,7 @@ textarea {
 h4 {
   color: #1d3552;
   font-size: 1.05em;
-  font-family: Helvetica;
+  font-family: News Cycle;
   font-weight: bold;
   padding-left: 15px;
 }
@@ -1928,7 +1936,7 @@ footer {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   height: 100%;
   margin: 10px auto;
-  font-family: Galdeano;
+  font-family: Yanone Kaffeesatz;
 }
 
 footer ul {
@@ -1945,7 +1953,7 @@ footer ul li a{
   color: #fff;
   font-weight: lighter;
   font-size: .9em;
-  font-family: Helvetica;
+  font-family: News Cycle;
 }
 
 a.footer-link {
@@ -2083,6 +2091,7 @@ GALLERY
   margin-top: 20px;
   width: 100%;
   font-weight: bold;
+  font-family:Istok Web;
 }
 
 h5.project-name {
@@ -2102,6 +2111,7 @@ line-height: 1.7em;
 list-style-type: none;
 font-size: 1.15em;
 margin-right: 0px;
+font-family:Istok Web;
 }
 
 li.project a {
@@ -2277,7 +2287,7 @@ footer ul li a{
   /*color: rgba(255,255,255,.8);
   font-weight: lighter;
   font-size: .9em;
-  font-family: Helvetica;*/
+  font-family: News Cycle;*/
 }
 
 
