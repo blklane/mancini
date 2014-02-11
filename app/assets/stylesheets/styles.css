@@ -1985,7 +1985,7 @@ a.footer-right:hover {
   box-shadow:inset 0px 1px 0px 0px #6797b5;
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #185285), color-stop(1, #14416b) );
   background:-moz-linear-gradient( center top, #185285 5%, #14416b 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#185285', endColorstr='#14416b');
+  /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#185285', endColorstr='#14416b');*/
   background-color:#185285;
   -webkit-border-top-left-radius:0px;
   -moz-border-radius-topleft:0px;
@@ -2019,7 +2019,7 @@ a.footer-right:hover {
 .button:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #14416b), color-stop(1, #185285) );
   background:-moz-linear-gradient( center top, #14416b 5%, #185285 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#14416b', endColorstr='#185285');
+  /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#14416b', endColorstr='#185285');*/
   background-color:#14416b;
 }.button:active {
   position:relative;
