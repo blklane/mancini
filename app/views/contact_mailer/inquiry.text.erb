@@ -1,6 +1,6 @@
 Hello Admins,
 
-Here is the quote submitted at <%= @inquiry.created_at.localtime.strftime('%Y-%m-%d %I:%M%P') %>
+Here is the quote submitted at <%= @inquiry.created_at.in_time_zone("Pacific Time (US & Canada)").strftime('%Y-%m-%d %I:%M%P') %>
 
 From: <%= @inquiry.name %> (<%= @inquiry.email %>)
 Phone: <%= @inquiry.phone %>
