@@ -1,4 +1,7 @@
 Mancini::Application.routes.draw do
+  resources :inquiries, only: [:create, :new]
+
+
   resources :projects
 
 
@@ -8,7 +11,7 @@ Mancini::Application.routes.draw do
   get 'floor-covering', to: 'home#floorcovering'
   get 'interior', to: 'home#interior'
   get 'structural', to: 'home#structural'
-  get 'contact', to: 'home#contact'
+  get 'contact', to: 'Inquiries#new'
   get 'home', to: 'home#index'
   get 'add-gallery', to: 'home#addgallery'
   get 'company-history', to: 'home#companyhistory'

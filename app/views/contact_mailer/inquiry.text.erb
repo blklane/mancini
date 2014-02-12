@@ -1,0 +1,10 @@
+Hello Admins,
+
+Here is the quote submitted at <%= @inquiry.created_at.localtime.strftime('%Y-%m-%d %I:%M%P') %>
+
+From: <%= @inquiry.name %> (<%= @inquiry.email %>)
+Phone: <%= @inquiry.phone %>
+Message: <%= @inquiry.content %>
+
+
+This is an automated message, please do not respond.
