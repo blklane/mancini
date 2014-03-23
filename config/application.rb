@@ -12,6 +12,17 @@ end
 module Mancini
   class Application < Rails::Application
 
+    # Mailer
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "btm-demo.herokuapps.com",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"]
+    }
     # Paperclip
     config.paperclip_defaults = {
       :storage => :s3,
