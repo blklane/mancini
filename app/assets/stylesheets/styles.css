@@ -254,50 +254,66 @@ h3 {
    box-shadow:         inset 0 0 5px #000000; 
 }
 
-.division p a, .division {
-  margin-top: 10px;
+.division {
+  background-color: green;
+  background: #fff top center fixed;
+  margin-bottom: 0px;
 }
 
-section.division {
-  padding: 10px;
-  width: 30%;
-  margin-top: 0px;
+.division p a, .division {
+  margin-top: 10px;
 }
 
 #floor-covering {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/floor-covering.jpg) no-repeat;
   height: 150px;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin: 10px 0 15px 0;
+  padding: 15px 0 0px 0;
 }
 
 #interior-architectural-products{
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/interior-bg.jpg) no-repeat;
   height: 150px;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin: 10px 0 15px 0;
+  padding: 15px 0 0 0;
 }
 
 #structural {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/structural-bg.png) no-repeat;
   height: 150px;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin: 10px 0 15px 0;
+  padding: 15px 0 0 0;
 }
 
 #division-slider {
   margin: 20px 0 10px 20px;
 }
 
-
-ul.csi-codes {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+.tabs-content {
+  height: 250px;
 }
 
-ul .csi-codes li {
-  margin-right: 100%;
+ul.csi-codes {
+  list-style-type: none;
+  max-height: 230px;
+  overflow: scroll;
+}
+
+ul.csi-codes p {
+  height: 10px;
+  float: left;
+  margin: 0 5px;
+}
+
+li.csi-code {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.csi-dropdown li {
+  font-size: .8em;
+  line-height: 1.5em;
+  margin-left: 15px;
 }
 
 .division-title {
@@ -325,8 +341,8 @@ ul .csi-codes li {
   background-color: rgba(250,250,250,.9);
   float: left;
   padding: 10px 10px 0px 10px;
-  max-width: 310px;
-  height: 140px;
+  width: 100%;
+  height: 130px;
   line-height: 1.2em;
   border-top: rgba(0,0,0,.5) solid 1px;
 }
@@ -335,7 +351,6 @@ a.division-link {
   display: none;
   text-decoration: none;
   float: right;
-  margin-top: -30px;
   padding-right: 10px;
   cursor: pointer;
 }
@@ -366,6 +381,11 @@ section h2 {
 #contact {
   width: 100%;
   z-index: 100;
+}
+
+form {
+  max-height: 340px;
+  overflow: scroll;
 }
 
 #contact-us { 
@@ -459,9 +479,9 @@ h4 {
 
 .footer {
   width: 100%;
-  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) center center fixed;
+  height: auto;
   float: left;
-  margin-top: 20px;
 }
 
 footer {
@@ -686,6 +706,11 @@ ul.dropdown li.status {
   max-height: 420px;
 }
 
+a.division-link:hover{
+  background-color: rgba(0,0,0,0);
+  color: #000;
+}
+
 
 
 /***********************************
@@ -762,19 +787,6 @@ color: white;
 section.division {
   padding: 10px;
   width: 100%;
-}
-
-ul.csi-codes {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  float: left;
-}
-ul.products {
-  columns: 1;
-  -webkit-columns: 1;
-  -moz-columns: 1;
-  float: left;
 }
 
 #maps-canvas {
