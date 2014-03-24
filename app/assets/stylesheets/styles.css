@@ -215,6 +215,12 @@ ul.awards li img {
   padding-right: 5px;
 }
 
+#login {
+  margin: 10px;
+  background-color: #123054;
+  color: white;
+}
+
 #bar {
   position: fixed;
   width: 100%;
@@ -434,6 +440,11 @@ form {
   padding-left: 10px;
 }
 
+.phone {
+  float: left;
+  width: 100%;
+}
+
 input {
   float: left;
   width: 94%;
@@ -479,7 +490,7 @@ h4 {
 
 .footer {
   width: 100%;
-  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) center center fixed;
+  background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png);
   height: auto;
   float: left;
 }
@@ -628,7 +639,6 @@ GALLERY
     float: left;
     height: 500px;
     margin: 0px auto;
-    padding: 0px;
 }
 
 .sidebar ul {
@@ -638,9 +648,7 @@ GALLERY
 }
 
 .sidebar h5 {
-  margin: 0px;
-  margin-top: 20px;
-  width: 100%;
+  margin: 20px 0 0 10px;
   font-weight: bold;
   font-family:'Istok Web';
 }
@@ -652,8 +660,6 @@ h5.project-name {
 h5.gallery-division {
   font-size: 1.7em;
   font-weight: lighter;
-  width: 100%;
-  padding-left: 10px;
   border-bottom: 1px solid #bbb;
 }
 
@@ -661,28 +667,28 @@ li.project {
 line-height: 1.7em;
 list-style-type: none;
 font-size: 1.15em;
-margin-right: 0px;
 font-family:'Istok Web';
-}
-
-li.project a {
-  margin-left: 7px;
+margin-left: 10px;
 }
 
 li.project a:hover {
   background-color: rgba(0,0,0,0);
   color: #000;
-  font-weight: bold;
 }
 
-ul.dropdown li.status {
-  margin-left: 0px;
+.sidebar ul.dropdown {
   list-style-type: none;
   font-size: .9em;
-  line-height: 1.1em;
-  background-color: rgba(0,0,0,.87);
-  padding: 5px 0px 5px 15px;
-  color: #ddd;
+  line-height: 1.4em;
+  background-color: rgba(0,0,0,.86);
+  padding: 5px 0px 5px 5px;
+  margin-left: -10px;
+  color: #eee;
+  width: 105%;
+}
+
+li.status {
+  margin-left: 5px;
 }
 
 .dropdown {
@@ -729,6 +735,9 @@ BEGIN MOBILE STYLES HERE
 @media (max-width: 768px) {
 /* Styles */
 
+.top-bar-section {
+ display: none;
+}
 
 .mobile {
   display:block;
