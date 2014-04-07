@@ -19,12 +19,14 @@
 $(function(){ $(document).foundation({
       orbit: {
         animation: 'slide',
-        timer: false,
+        timer: true,
+        timer_speed: 3000,
+        next_on_click: true,
         slide_number: false,
         variable_height: true,
-        animation_speed: 500,
-        navigation_arrows: true,
+        animation_speed: 800,
+        navigation_arrows: false,
         bullets: false
       }
-    }); 
+    });
 });

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $('.gallery').hide();
     $('.csi-dropdown').hide();
     $('.button').children().on('click', function(){
@@ -33,9 +34,11 @@ $(document).ready(function () {
             title: 'B.T. Mancini Inc'
         });
         infowindow.open(map, marker);
+    
     }
-
     google.maps.event.addDomListener(window, 'load', initialize);
+
+    
 
     function closeSafety() {
         $('#safety .container, #bar a').fadeOut(500);
@@ -59,26 +62,23 @@ $(document).ready(function () {
 
 
     function gallerySlider() {
-        $(".slider").animate({
-            top: $(this).closest('li').offset().top,
-        });
       
         var classy = $(this).data("id"),
         searchGallery = '.gallery[data-id=' + classy + ']',
         newGallery = $(searchGallery);
         
         if($(this).hasClass('selected')){
-            $(this).removeClass('selected').find('.dropdown').slideToggle();
-        }else{
-            $('.selected').removeClass('selected').closest('.project').find('.dropdown').slideToggle();
-            $(this).addClass('selected').find('.dropdown').slideToggle();
+            // $(this).removeClass('selected').find('.project > .dropdown').slideToggle();
+        } else {
+            $('.selected').removeClass('selected').closest('.project').find('.dropdown').slideUp();
+            $(this).addClass('selected').find('.dropdown').slideDown();
         }
 
         var pastGallery = $('.gallery[data-active=true]');
-        if(pastGallery.length > 0 && pastGallery != newGallery){
+        if(pastGallery.length > 0 && pastGallery !== newGallery){
             pastGallery.hide().removeClass('fadeInLeft').addClass('animated fadeOutUp').removeAttr('data-active');
         }
-        if(pastGallery != newGallery){
+        if(pastGallery !== newGallery){
             newGallery.show().removeClass('fadeOutUp').addClass('animated fadeInLeft').attr('data-active', true);
         }
     }
@@ -122,7 +122,6 @@ $('#csi-bar').click(function () {
 });
 
 $('.products-services').click(function () {
-    //showText();
     $('.csi-codes, #csi-bar').slideUp('slow');
     $('#division-subsection').slideDown('slow').css('height', '100%');
     $('.products, #products-bar').slideDown('slow').css('display', 'block');
@@ -132,19 +131,19 @@ $('#products-bar').click(function () {
     $('.products, #products-bar').slideUp('slow');
 });
 
-$('.division').mouseenter(function () {
-    //showText();
-    $('.division-text, a.division-link', this).removeClass('fadeOutUp');
-    $('.division-text, a.division-link', this).css('display', 'block');
-    $('.division').not(this).fadeTo("slow", 0.8);
-    $('.division-text, a.division-link', this).addClass('animated fadeInDown');
+// $('.division').mouseenter(function () {
+//     //showText();
+//     $('.division-text, a.division-link', this).removeClass('fadeOutUp');
+//     $('.division-text, a.division-link', this).css('display', 'block');
+//     $('.division').not(this).fadeTo("slow", 0.8);
+//     $('.division-text, a.division-link', this).addClass('animated fadeInDown');
 
-});
-$('.division').mouseleave(function () {
-    $('.division-text, a.division-link', this).removeClass('fadeInDown');
-    $('.division').fadeTo("fast", 1);
-    $('.division-text, a.division-link', this).addClass('animated fadeOutUp');
-});
+// });
+// $('.division').mouseleave(function () {
+//     $('.division-text, a.division-link', this).removeClass('fadeInDown');
+//     $('.division').fadeTo("fast", 1);
+//     $('.division-text, a.division-link', this).addClass('animated fadeOutUp');
+// });
 
 $('#bar').click(function () {
     closeSafety();

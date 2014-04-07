@@ -1,5 +1,5 @@
 body{
-  font-family: 'Istok Web', 'News Cycle', 'Yanone Kaffeesatz';
+  font-family: 'Cantarell', sans-serif;
   color: #1d3552;
   margin: 0 auto;
   max-width: 1020px;
@@ -8,35 +8,49 @@ body{
 
 .header {
   background-color: rgba(255,255,255,0);
-  height: 110px;
+  height: 155px;
   padding: 5px 0px;
 }
 
-.header h1, .header h4{
-  float: right;
-  position: absolute;
-  right: 10px;
-  margin-left: 45%;
-}
-.header h4 {
-  font-family: 'News Cycle';
-  font-size: 1em;
-  margin-top: 0px;
-  font-size: 1.1em;
+.header h1 {
   top: 45px;
   float: right;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 70px;
+  font-size: 38px;
+  margin: 0 0 0 0;
+  margin-left: 25%;
 }
 
-.header h1 {
-  font-family: 'News Cycle';
-  margin-top: 0px;
-  top: 5px;
-  font-weight: bold;
+.header h4{
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 0 0;
+  float: right;
+  margin-left: 25%;
+}
+
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 1.1em;
+  line-height: 23px;
+  margin: 0 0 23px 0;
 }
 
 #btm-logo {
   height: 100%;
-  max-height: 100px;
+  max-height: 150px;
   margin: 0px 5px;
   padding: 5px 0px;
   float: left;
@@ -75,7 +89,7 @@ nav ul li {
 }
 
 .orbit {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .notice {
@@ -202,7 +216,7 @@ ul.awards {
   font-size: 1em;
   opacity: 0.9;
   font-weight: lighter;
-  font-family: 'Open Sans Condensed';
+  font-family: 'Cantarell', sans-serif;
   margin-top: 10px;
 }
 
@@ -251,8 +265,8 @@ h3 {
   width: 100%;
   text-align: center;
   color: #fff;
-  margin: 0px;
-  font-family: 'Istok Web';
+  margin: 0 0 10px 0;
+  font-family: 'Cantarell', sans-serif;
   background-color: #777;
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png);
   -moz-box-shadow:    inset 0 0 5px #000000;
@@ -263,8 +277,18 @@ h3 {
 .division {
   background-color: green;
   background: #fff top center fixed;
-  margin-bottom: 0px;
+  margin: 30px auto;
+  text-align: center;
 }
+
+/*.division img {
+  width: 25%;
+  vertical-align: center;
+  margin: auto;
+  padding: 5px 10px;
+  margin-top: 120px; 
+  background-color: white;
+}*/
 
 .division p a, .division {
   margin-top: 10px;
@@ -273,21 +297,21 @@ h3 {
 #floor-covering {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/floor-covering.jpg) no-repeat;
   height: 150px;
-  margin: 10px 0 15px 0;
+  margin: 20px 0 15px 0;
   padding: 15px 0 0px 0;
 }
 
 #interior-architectural-products{
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/interior-bg.jpg) no-repeat;
   height: 150px;
-  margin: 10px 0 15px 0;
+  margin: 20px 0 15px 0;
   padding: 15px 0 0 0;
 }
 
 #structural {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/structural-bg.png) no-repeat;
   height: 150px;
-  margin: 10px 0 15px 0;
+  margin: 20px 0 15px 0;
   padding: 15px 0 0 0;
 }
 
@@ -343,14 +367,13 @@ li.csi-code {
 }
 
 .division-text {
-  display: none;
-  background-color: rgba(250,250,250,.9);
+  background-color: rgba(250,250,250,.95);
   float: left;
   padding: 10px 10px 0px 10px;
+  margin-top: 130px;
   width: 100%;
-  height: 130px;
   line-height: 1.2em;
-  border-top: rgba(0,0,0,.5) solid 1px;
+  /*border-top: rgba(0,0,0,.5) solid 1px;*/
 }
 
 a.division-link {
@@ -368,7 +391,7 @@ section h2 {
   line-height: 1.2em;
   font-size: 1.2em;
   font-weight: bold;
-  font-family: 'Istok Web';
+  font-family: 'Fjalla One', sans-serif;
 }
 
 #contact-container {
@@ -435,7 +458,7 @@ form {
   color: #1d3552;
   font-size: 1.05em;
   line-height: 24px;
-  font-family: 'News Cycle';
+  font-family: 'Cantarell';
   font-weight: bold;
   padding-left: 10px;
 }
@@ -483,7 +506,7 @@ textarea {
 h4 {
   color: #1d3552;
   font-size: 1.05em;
-  font-family: 'News Cycle';
+  font-family: 'Fjalla One';
   font-weight: bold;
   padding-left: 15px;
 }
@@ -499,7 +522,7 @@ footer {
   background: url(https://s3.amazonaws.com/bt_mancini/site-images/header-bg.png) repeat;
   height: 100%;
   margin: 10px auto;
-  font-family: 'News Cycle';
+  font-family: 'Cantarell';
 }
 
 footer ul {
@@ -516,7 +539,7 @@ footer ul li a{
   color: #fff;
   font-weight: lighter;
   font-size: 1em;
-  font-family: 'News Cycle';
+  font-family: 'Cantarell';
 }
 
 a.footer-link {
@@ -650,11 +673,14 @@ GALLERY
 .sidebar h5 {
   margin: 20px 0 0 10px;
   font-weight: bold;
-  font-family:'Istok Web';
+  font-family:'Fjalla One';
 }
 
 h5.project-name {
   color: white;
+  font-family:'Fjalla One';
+  font-size: 1.7em;
+  font-weight: lighter;
 }
 
 h5.gallery-division {
@@ -667,7 +693,7 @@ li.project {
 line-height: 1.7em;
 list-style-type: none;
 font-size: 1.15em;
-font-family:'Istok Web';
+font-family:'Cantarell';
 margin-left: 10px;
 }
 
@@ -717,6 +743,10 @@ a.division-link:hover{
   color: #000;
 }
 
+.paused, .orbit-oregress, .orbit-timer {
+  display: none;
+}
+
 
 
 /***********************************
@@ -735,9 +765,9 @@ BEGIN MOBILE STYLES HERE
 @media (max-width: 768px) {
 /* Styles */
 
-.top-bar-section {
+/*.top-bar-section {
  display: none;
-}
+}*/
 
 .mobile {
   display:block;
@@ -755,19 +785,14 @@ nav {
   display:none;
 }
 
-#btm-logo-mobile {
-  float: left;
-  display: block;
-}
-
-nav h1 {
+/*nav h1 {
 margin-top: 25px;
 font-size: 1.2em;
 position: absolute;
 right: 10px;
 float: right;
 color: white;
-}
+}*/
 
 .header {
   height: 80px;

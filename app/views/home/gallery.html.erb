@@ -2,7 +2,6 @@
 <!-- Floor covering gallery images go here -->
 <div class="large-3 medium-3 colums sidebar">
 	<ul>
-		<!-- <li class="slider">◀</li> -->
         <% ['floor_covering', 'interior', 'structural'].each do |project_type| %>
 			<h5 class="gallery-division"><%= instance_variable_get("@#{project_type}_type").gsub('_', ' ').split.map(&:capitalize).join(' ') %>
 			<% instance_variable_get("@#{project_type}_projects").each do |project| %></h5>
