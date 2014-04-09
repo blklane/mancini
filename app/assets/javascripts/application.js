@@ -24,7 +24,7 @@ $(function(){ $(document).foundation({
         next_on_click: true,
         slide_number: false,
         variable_height: true,
-        animation_speed: 800,
+        animation_speed: 500,
         navigation_arrows: false,
         bullets: false
       }

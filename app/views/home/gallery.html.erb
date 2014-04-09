@@ -3,10 +3,10 @@
 <div class="large-3 medium-3 colums sidebar">
 	<ul>
         <% ['floor_covering', 'interior', 'structural'].each do |project_type| %>
-			<h5 class="gallery-division"><%= instance_variable_get("@#{project_type}_type").gsub('_', ' ').split.map(&:capitalize).join(' ') %>
-			<% instance_variable_get("@#{project_type}_projects").each do |project| %></h5>
+			<h5 class="gallery-division"><%= instance_variable_get("@#{project_type}_type").gsub('_', ' ').split.map(&:capitalize).join(' ') %></h5>
+			<% instance_variable_get("@#{project_type}_projects").each do |project| %>
 				<li class="project" data-id="<%= project.slug %>"><a><%= project.name %></a>
-	                <ul class="dropdown" data-dropdown-content>
+	                <ul class="dropdown" >
 	                    <li class="status">Architect: <%= project.architect %></li>
 	                    <li class="status">Contractor: <%=project.contractor%></li>
 	                    <li class="status">Products: <%=project.product%></li>

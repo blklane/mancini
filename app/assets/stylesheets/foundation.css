@@ -34,7 +34,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1153,7 +1153,8 @@ meta.foundation-mq-topbar {
   position: relative;
   background: #123054;
   margin-bottom: 0; 
-  font-family: Istok Web;}
+  /*font-family: Istok Web;*/
+  }
   .top-bar ul {
     margin-bottom: 0;
     list-style: none; }
@@ -1262,13 +1263,13 @@ meta.foundation-mq-topbar {
     color: white;
     padding: 12px 0 12px 0;
     padding-left: 15px;
-    font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;
+    /*font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;*/
     font-size: 1rem;
       font-weight: bold;
     font-weight: normal;
     background: #123054; }
     .top-bar-section ul li ul li > a {
-    font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;
+    /*font-family: Istok Web, "Helvetica", Helvetica, Arial, sans-serif;*/
     font-size: .9rem;
    }
     .top-bar-section ul li > a.button {
@@ -1606,7 +1607,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: Yanone Kaffeesatz, "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: Yanone Kaffeesatz, "Helvetica", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2307,17 +2308,18 @@ button, .button {
     clear: both; }
   .tabs dd {
     position: relative;
-    margin-bottom: 0 !important;
+    margin: 0px;
+    /*margin-bottom: 0 !important;*/
     top: 1px;
     float: left; }
     .tabs dd > a {
       display: block;
       background: #efefef;
       color: #222222;
-      padding-top: 1rem;
-      padding-right: 2rem;
-      padding-bottom: 1.0625rem;
-      padding-left: 2rem;
+      padding-top: .25rem;
+      padding-right: 1rem;
+      padding-bottom: .25rem;
+      padding-left: 1rem;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .tabs dd > a:hover {
@@ -2422,7 +2424,7 @@ ul.pagination {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }*/
   .side-nav li {
     margin: 0 0 0.4375rem 0;
     font-size: 0.875rem; }
@@ -3216,7 +3218,7 @@ blockquote p {
     display: inline;
     margin-left: 1rem;
     margin-bottom: 0.625rem;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
     font-weight: normal;
     font-size: 0.875rem;
     color: #999999; }
