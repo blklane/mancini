@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 
-body{
+body {
   font-family: 'Cantarell', sans-serif;
   color: #1d3552;
   margin: 0 auto;
@@ -188,7 +188,6 @@ nav {
   margin: 10px 0 0 0;
   float: left;
   border-radius: 50%;
-
 }
 #safety .text {
   float: right;
