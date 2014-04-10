@@ -783,6 +783,12 @@ li.status {
   max-height: 420px;
 }
 
+.orbit-container {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
 a.division-link:hover{
   background-color: rgba(0,0,0,0);
   color: #000;

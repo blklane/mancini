@@ -147,5 +147,4 @@ $('#bar').click(function () {
 
 $('.csi-code').on('click', showStatus);
 closeSafety();
-dropDownArrow();
 });
