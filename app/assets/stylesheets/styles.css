@@ -245,6 +245,7 @@ nav {
 
 table {
   text-align: left;
+  margin-top: 20px;
 }
 
 ul.awards {
@@ -293,6 +294,11 @@ ul.awards li img {
   font-size: 1.7em;
 }
 
+#bar a:hover{
+  background-color: rgba(0,0,0,0);
+  color: #555;
+}
+
 h3 {
   color: white;
 }
@@ -334,8 +340,13 @@ h3 {
   padding: 15px 0 0 0;
 }
 
-#division-slider {
-  margin: 20px 0 10px 20px;
+#right-bar {
+  background-color: rgba(0,0,0,.05);
+}
+
+#right-bar .orbit {
+  margin-top: 10px;
+
 }
 
 .tabs-content {
@@ -390,7 +401,7 @@ li.csi-code {
 
 .division {
   background: #fff top center fixed;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 #div3 .division img {
@@ -400,7 +411,7 @@ li.csi-code {
   margin-top: 140px; 
 }
 
-.division p a, .division {
+.division p a {
   margin-top: 10px;
 }
 
